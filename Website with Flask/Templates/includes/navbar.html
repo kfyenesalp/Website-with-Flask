@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+<style>
+body {
+  background-image: url('https://cdn.wallpapersafari.com/40/91/luiUcP.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+</style>  
+<body background = "https://www.arttablo.com/upload/U-galaksi-8-dunya-uzay-kanvas-tablo1454080106-800.jpg">
+  <title>Cooldown</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Cooldown</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+    <li><a href="/analysis">İncelemeler</a></li>
+      {% if session["username"] == "admin" %}
+            <li><a href="/control">Kontrol Paneli</a></li>
+      {% endif %}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li id="sear"><div class="form-group">
+            <form action="/search" method = "POST" class="search-form">
+                <div class="form-group has-feedback">
+            		<label for="search" class="sr-only">Ara</label>
+            		<input type="text" class="form-control" name="keyword" id="search" placeholder="Ara">
+              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+            	</div>
+          </form>
+      </div></li>
+          {% if session["logged_in"] %}
+            <li><a href="/logout">Çıkış</a></li>
+          {% else %}
+            <li><a href="/login">Giriş Yap</a></li>
+            <li><a href="/register">Kayıt Ol</a></li>
+          {% endif %}
+          
+
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
